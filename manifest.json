@@ -1,12 +1,12 @@
 {
-    "name": "greens_app",
-    "short_name": "greens_app",
+    "name": "Greens | Eat well, grow well",
+    "short_name": "Greens",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Greens Flutter project.",
-    "orientation": "portrait-primary",
+    "background_color": "#F7F6F0",
+    "theme_color": "#193C33",
+    "description": "Fresh food, thoughtful habits, and a community growing toward a lighter footprint.",
+    "orientation": "any",
     "prefer_related_applications": false,
     "icons": [
         {
