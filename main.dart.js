@@ -97474,7 +97474,7 @@ return s},
 gA(a){var s=null
 return B.eg.gA(s)^B.eg.gA(s)^B.c.gA(this.c)^B.eg.gA(s)^B.eg.gA(s)^B.eg.gA(s)}}
 A.Td.prototype={
-I(a){return new A.D6(B.DJ,"Silkstone Greens Pineapple App",A.xO(null,null,B.wz,!0),!1,null)}}
+I(a){return new A.D6(B.DJ,"Silkstone Greens App",A.xO(null,null,B.wz,!0),!1,null)}}
 A.i6.prototype={}
 A.dW.prototype={}
 A.e0.prototype={
