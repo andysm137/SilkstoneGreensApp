@@ -106430,7 +106430,7 @@ return A.q($async$u0,r)},
 F(a){var s,r,q,p=this,o=null
 if(p.y)return B.b_
 s=t.p
-r=A.bq(A.b([B.a97,B.iz,A.FU(A.G("v1.05.65 (fbd976b)",o,o,o,o,B.l5,o,o,o),0.7)],s),B.l,B.h,B.o,0,o)
+r=A.bq(A.b([B.a97,B.iz,A.FU(A.G("v1.05.66 (46e8c14)",o,o,o,o,B.l5,o,o,o),0.7)],s),B.l,B.h,B.o,0,o)
 q=p.x
 q===$&&A.a()
 r=A.lj(o,o,o,A.auY(q,!1,B.U8),o,o,o,o,o,r)
@@ -110459,11 +110459,13 @@ if(n===0)n=A.cO(A.G(m.r?"No upcoming events or practices.":"No events or practic
 else n=A.TP(new A.aIx(m,o),n,l)
 return A.aJ(A.b([q,A.bJ(n,1)],t.p),B.l,B.h,B.o)},
 oV(a,b,c){return this.ash(a,b,c)},
-ash(a,b,c){var s=0,r=A.r(t.H),q,p=this,o,n
+ash(a,b,c){var s=0,r=A.r(t.H),q,p=this,o,n,m,l
 var $async$oV=A.n(function(d,e){if(d===1)return A.o(e,r)
 for(;;)switch(s){case 0:if(b===c){s=1
-break}o=c==="Attending"&&b!=="Attending"
-s=!p.a.c&&p.av2(a)&&b!=="Attending"?3:4
+break}o=c==="Attending"
+n=o&&b!=="Attending"
+m=a.c==="Booking - Social"&&b==="Not Attending"&&!o
+s=!p.a.c&&p.av2(a)&&b!=="Attending"&&!m?3:4
 break
 case 3:s=5
 return A.h(p.aB9(),$async$oV)
@@ -110473,29 +110475,29 @@ case 4:s=b==="Interested"?6:8
 break
 case 6:s=9
 return A.h(p.yQ("Any comments or questions? (optional)","Interested response"),$async$oV)
-case 9:n=e
-if(p.c==null||n==null){s=1
+case 9:l=e
+if(p.c==null||l==null){s=1
 break}s=7
 break
 case 8:s=b==="Maybe"?10:12
 break
 case 10:s=13
 return A.h(p.a2I("Maybe response"),$async$oV)
-case 13:n=e
-if(p.c==null||n==null){s=1
+case 13:l=e
+if(p.c==null||l==null){s=1
 break}s=11
 break
-case 12:s=b==="Not Attending"&&o?14:16
+case 12:s=b==="Not Attending"&&n?14:16
 break
 case 14:s=17
 return A.h(p.a2I("Reason for changing to No"),$async$oV)
-case 17:n=e
-if(p.c==null||n==null){s=1
+case 17:l=e
+if(p.c==null||l==null){s=1
 break}s=15
 break
-case 16:n=null
+case 16:l=null
 case 15:case 11:case 7:s=18
-return A.h(p.uE(a,b,n),$async$oV)
+return A.h(p.uE(a,b,l),$async$oV)
 case 18:case 1:return A.p(q,r)}})
 return A.q($async$oV,r)},
 av2(a){var s,r=a.w
