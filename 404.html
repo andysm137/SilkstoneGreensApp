@@ -71,9 +71,38 @@
           userVisibleOnly: true,
           applicationServerKey: urlBase64ToUint8Array(vapidPublicKey),
         });
+        localStorage.removeItem('greensPushDisabled');
+        return JSON.stringify(subscription.toJSON());
+      },
+      // Silently restores a lapsed subscription for browsers that already
+      // granted permission and have not explicitly turned notifications off.
+      refresh: async (vapidPublicKey) => {
+        if (Notification.permission !== 'granted') return '';
+        if (localStorage.getItem('greensPushDisabled')) return '';
+        const registration = await navigator.serviceWorker.register(
+          'push/push-notifications-sw.js',
+          { scope: 'push/' },
+        );
+        await waitForActivation(registration);
+        const expectedKey = urlBase64ToUint8Array(vapidPublicKey);
+        let subscription = await registration.pushManager.getSubscription();
+        if (subscription) {
+          const currentKey = subscription.options.applicationServerKey;
+          const matches = currentKey &&
+            new Uint8Array(currentKey).join(',') === expectedKey.join(',');
+          if (!matches) {
+            await subscription.unsubscribe();
+            subscription = null;
+          }
+        }
+        subscription ??= await registration.pushManager.subscribe({
+          userVisibleOnly: true,
+          applicationServerKey: expectedKey,
+        });
         return JSON.stringify(subscription.toJSON());
       },
       unsubscribe: async () => {
+        localStorage.setItem('greensPushDisabled', '1');
         const registration = await navigator.serviceWorker.getRegistration('push/');
         const subscription = await registration?.pushManager.getSubscription();
         if (!subscription) return '';
