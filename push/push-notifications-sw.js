@@ -4,8 +4,8 @@ self.addEventListener('push', (event) => {
     self.registration.showNotification(payload.title || 'Silkstone Greens', {
       body: payload.body || '',
       data: { url: payload.url || '../' },
-      icon: '../icons/Icon-192.png',
-      badge: '../icons/Icon-192.png',
+      icon: '../icons/Greens-App-icon-192.jpg',
+      badge: '../icons/Greens_App_Notification_Badge.png',
     }),
   );
 });
