@@ -108151,7 +108151,7 @@ return A.q($async$ui,r)},
 D(a){var s,r,q,p=this,o=null
 if(p.y)return B.b1
 s=t.p
-r=A.aT(A.b([B.ac6,B.h9,A.yn(A.v("v1.10.00 (940a1c3)",o,o,o,o,B.lp,o,o,o),0.7)],s),B.l,B.i,B.k,0,o)
+r=A.aT(A.b([B.ac6,B.h9,A.yn(A.v("v1.10.00 (1fb9e58)",o,o,o,o,B.lp,o,o,o),0.7)],s),B.l,B.i,B.k,0,o)
 q=p.x
 q===$&&A.a()
 r=A.kz(o,o,o,A.aw_(q,!1,B.VO),o,o,o,o,o,r)
@@ -116339,7 +116339,7 @@ o.a=i}i=this.iY(a.a)
 h=s?'<div class="special-wrap"><span class="pos-label">MAF</span> '+A.i(p.$1(99))+"</div>":""
 l=o.k(0)
 k=r?'<div class="special-wrap"><span class="pos-label">MAB</span> '+A.i(p.$1(98))+"</div>":""
-return'      <div class="dance-box" style="background: '+q+';">\n        <h3>'+i+"</h3>\n        "+h+'\n        <table class="positions-table">\n          '+l+"\n        </table>\n        "+k+"\n      </div>\n    "},
+return'      <div class="dance-box" style="position: relative; overflow: hidden;">\n        <svg width="100%" height="100%" style="position: absolute; top: 0; left: 0; z-index: -1;">\n          <rect width="100%" height="100%" fill="'+q+'" />\n        </svg>\n        <h3>'+i+"</h3>\n        "+h+'\n        <table class="positions-table">\n          '+l+"\n        </table>\n        "+k+"\n      </div>\n    "},
 a2U(a){var s,r,q,p,o,n,m,l,k,j='<td class="pos-label">',i=t.P.a(a.b),h=t.f,g=t.S,f=A.f1(h.a(i.h(0,"candidates")),g,t.D),e=A.f1(h.a(i.h(0,"primaryIds")),g,t.N),d=A.eg(i.h(0,"positionCount"))
 if(d==null)d=8
 s=J.c(i.h(0,"hasMaf"),!0)
@@ -116358,7 +116358,7 @@ h+="</tr>"
 n.a=h}h=this.iY(a.a)
 g=A.i(s?o.$2(99,"MAF"):"")
 k=n.k(0)
-return'      <div class="dance" style="background:'+q+';">\n        <h3>'+h+"</h3>\n        "+g+'\n        <table class="positions">'+k+"</table>\n        "+A.i(r?o.$2(98,"MAB"):"")+"\n      </div>\n    "},
+return'      <div class="dance" style="position: relative; overflow: hidden;">\n        <svg width="100%" height="100%" style="position: absolute; top: 0; left: 0; z-index: -1;">\n          <rect width="100%" height="100%" fill="'+q+'" />\n        </svg>\n        <h3>'+h+"</h3>\n        "+g+'\n        <table class="positions">'+k+"</table>\n        "+A.i(r?o.$2(98,"MAB"):"")+"\n      </div>\n    "},
 Yx(a,b,c,d){var s=J.dP(a,new A.aU1(b,c,d)),r=s.$ti.i("cn<1,@>")
 return A.cZ(new A.cn(s,new A.aU2(),r),r.i("w.E")).a},
 anb(a,b,c,d,e){var s,r,q,p="id",o="proficiencyLevel"
